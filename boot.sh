@@ -21,10 +21,10 @@ display_warning() {
 envsubst '$MEDIA_ROOT $STATIC_ROOT $TANDOOR_PORT' < /opt/recipes/http.d/Recipes.conf.template > /opt/recipes/http.d/Recipes.conf
 
 # start nginx early to display error pages
-echo "Starting nginx"
-nginx
+# echo "Starting nginx"
+# nginx
 
-echo "Checking configuration..."
+# echo "Checking configuration..."
 
 # SECRET_KEY (or a valid file at SECRET_KEY_FILE) must be set in .env file
 
