@@ -105,5 +105,3 @@ ipv6_disable=$(cat /sys/module/ipv6/parameters/disable)
 
 echo "Starting gunicorn"
 exec gunicorn recipes.wsgi:application --bind 0.0.0.0:$PORT --workers $GUNICORN_WORKERS --threads $GUNICORN_THREADS --timeout ${GUNICORN_TIMEOUT:-30} --access-logfile - --error-logfile - --log-level $GUNICORN_LOG_LEVEL
-
-
